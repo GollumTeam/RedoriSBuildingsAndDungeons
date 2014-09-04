@@ -1,0 +1,15 @@
+{
+	"dungeon": {
+		"globalSpawnRate":5,
+		"buildings": {
+			"dungeon1":[
+				{
+					"dimention":0,
+					"spawnRate":6,
+					"blocksSpawn":["net.minecraft.block.Block|grass"],
+					"spawnHeight":64
+				}
+			]
+		}
+	}
+}
