@@ -12,7 +12,9 @@
         { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "up"},
         { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "right"},
         { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "down"},
-        { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "left"}
+        { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "left"},
+        { "block": "net.minecraft.block.Block|fenceIron" },
+        { "block": "net.minecraft.block.Block|netherBrick" }
 	],
 	"sets": {},
 	
