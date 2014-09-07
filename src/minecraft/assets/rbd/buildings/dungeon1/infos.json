@@ -1,5 +1,7 @@
 {
-	"color" : [
+    "height": -150,
+    
+    "color" : [
 		{ "block": "net.minecraft.block.Block|bedrock" },
 		{ "block": "net.minecraft.block.Block|netherrack" },
 		{ "block": "net.minecraft.block.Block|stainedClay", "metadata": 14 },
@@ -14,9 +16,15 @@
         { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "down"},
         { "block": "net.minecraft.block.Block|stairsStoneBrick", "orientation": "left"},
         { "block": "net.minecraft.block.Block|fenceIron" },
-        { "block": "net.minecraft.block.Block|netherBrick" }
+        { "block": "net.minecraft.block.Block|netherBrick" },
+        { "block": "net.minecraft.block.Block|glowStone" },
+        { "block": "net.minecraft.block.Block|lavaStill" },
+		{ "block": "net.minecraft.block.Block|ladder", "orientation": "left" },
+		{ "block": "net.minecraft.block.Block|ladder", "orientation": "right" }
 	],
 	"sets": {},
 	
-	"random": []
+	"random": [],
+    
+    "randomBuildings": []
 }

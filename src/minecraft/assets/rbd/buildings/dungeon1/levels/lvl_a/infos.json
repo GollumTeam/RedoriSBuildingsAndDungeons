@@ -1,0 +1,16 @@
+{
+    "height": -150,
+    
+    "color" : [
+		{ "block": "net.minecraft.block.Block|bedrock" },
+		{ "block": "net.minecraft.block.Block|torchRedstoneActive" },
+		{ "block": "net.minecraft.block.Block|redstoneWire" },
+		{ "block": "net.minecraft.block.Block|redstoneComparatorIdle", "orientation": "left", "metadata": 4 },
+		{ "block": "net.minecraft.block.Block|redstoneComparatorIdle", "orientation": "right", "metadata": 4 },
+		{ "block": "net.minecraft.block.Block|lever" },
+		{ "block": "net.minecraft.block.Block|redstoneRepeaterIdle", "orientation": "right" }
+	],
+	"sets": {},
+	
+	"random": []
+}

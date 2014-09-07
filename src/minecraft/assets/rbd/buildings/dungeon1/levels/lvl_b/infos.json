@@ -1,0 +1,11 @@
+{
+    "height": -150,
+    
+    "color" : [
+		{ "block": "net.minecraft.block.Block|glowStone" },
+		{ "block": "net.minecraft.block.Block|stainedClay", "metadata": 5 }
+	],
+	"sets": {},
+	
+	"random": []
+}

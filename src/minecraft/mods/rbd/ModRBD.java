@@ -1,5 +1,6 @@
 package mods.rbd;
 
+import mods.gollum.core.common.building.BuildingParser;
 import mods.gollum.core.common.i18n.I18n;
 import mods.gollum.core.common.log.Logger;
 import mods.gollum.core.common.mod.GollumMod;
@@ -53,7 +54,9 @@ public class ModRBD extends GollumMod {
 	/** 1 **/
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
-		
+
+		new BuildingParser().parse("dungeon1", this.MODID);
+		new BuildingParser().parse("dungeon1/levels/lvl_a", this.MODID);
 		// Charge la configuration
 		this.config = new ConfigRBD().loadConfig();
 		
@@ -62,10 +65,9 @@ public class ModRBD extends GollumMod {
 		
 	}
 	
-	/** 2 **/
+	/** 2 **/ 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		
 	}
 	
 	/** 3 **/
