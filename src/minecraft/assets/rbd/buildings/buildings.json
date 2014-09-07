@@ -2,14 +2,16 @@
 	"dungeon": {
 		"globalSpawnRate":5,
 		"buildings": {
-			"dungeon1":[
-				{
-					"dimention":0,
-					"spawnRate":6,
-					"blocksSpawn":["net.minecraft.block.Block|grass"],
-					"spawnHeight":64
+			"dungeon1": {
+				"disabled": false,
+				"dimentions": {
+					"0": {
+						"spawnRate":6,
+						"spawnHeight":64,
+						"blocksSpawn":["net.minecraft.block.Block|grass"]
+					}
 				}
-			]
+			}
 		}
 	}
 }
