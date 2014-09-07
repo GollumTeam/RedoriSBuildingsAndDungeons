@@ -2,8 +2,8 @@
     "height": -150,
     
     "color" : [
-		{ "block": "net.minecraft.block.Block|glowStone" },
-		{ "block": "net.minecraft.block.Block|stainedClay", "metadata": 5 }
+		{ "block": "minecraft:glowstone" },
+		{ "block": "minecraft:stained_hardened_clay", "metadata": 5 }
 	],
 	"sets": {},
 	

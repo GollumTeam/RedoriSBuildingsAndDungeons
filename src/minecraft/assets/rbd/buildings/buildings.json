@@ -8,7 +8,7 @@
 					"0": {
 						"spawnRate":6,
 						"spawnHeight":64,
-						"blocksSpawn":["net.minecraft.block.Block|grass"]
+						"blocksSpawn":["minecraft:grass"]
 					}
 				}
 			}
