@@ -1,12 +1,14 @@
 package mods.rbd;
 
 import mods.gollum.core.common.building.BuildingParser;
+import mods.gollum.core.common.facory.Mobactory;
 import mods.gollum.core.common.i18n.I18n;
 import mods.gollum.core.common.log.Logger;
 import mods.gollum.core.common.mod.GollumMod;
 import mods.gollum.core.common.version.VersionChecker;
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
+import mods.rbd.common.entities.EntityFireFaery;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -68,11 +70,28 @@ public class ModRBD extends GollumMod {
 	/** 2 **/ 
 	@Override
 	public void init(FMLInitializationEvent event) {
+
+		// Execution du renderer en fonction du serveur ou du client
+		proxy.registerRenderers();
+		
+		// Initialisation des Mobs
+		this.initMobs ();
+		
 	}
 	
 	/** 3 **/
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
+	}
+	
+
+	/**
+	 * Enregistrement des Mobs
+	 */
+	private void initMobs () {
+		
+		new Mobactory().register(this, EntityFireFaery.class, "FireFaery", 0x333333, 0xFF0000);;
+		
 	}
 	
 }

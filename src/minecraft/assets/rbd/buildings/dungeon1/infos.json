@@ -15,12 +15,16 @@
         { "block": "minecraft:stone_brick_stairs", "orientation": "right"},
         { "block": "minecraft:stone_brick_stairs", "orientation": "down"},
         { "block": "minecraft:stone_brick_stairs", "orientation": "left"},
-        { "block": "minecraft:iron_bars" },
+        { "block": "minecraft:obsidian" },
         { "block": "minecraft:nether_brick" },
         { "block": "minecraft:glowstone" },
         { "block": "minecraft:lava" },
+        { "block": "minecraft:flowing_lava" },
 		{ "block": "minecraft:ladder", "orientation": "left" },
-		{ "block": "minecraft:ladder", "orientation": "right" }
+		{ "block": "minecraft:ladder", "orientation": "right" },
+		{ "block": "minecraft:gold_block" },
+		{ "block": "minecraft:carpet", "metadata": 14 },
+        { "block": "minecraft:glass" }
 	],
 	"sets": {},
 	
