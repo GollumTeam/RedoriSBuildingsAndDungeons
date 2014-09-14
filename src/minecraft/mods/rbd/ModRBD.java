@@ -90,7 +90,7 @@ public class ModRBD extends GollumMod {
 	 */
 	private void initMobs () {
 		
-		new Mobactory().register(this, EntityFireFaery.class, "FireFaery", 0x333333, 0xFF0000);;
+		new Mobactory().register(EntityFireFaery.class, "FireFaery", 0x333333, 0xFF0000);;
 		
 	}
 	
