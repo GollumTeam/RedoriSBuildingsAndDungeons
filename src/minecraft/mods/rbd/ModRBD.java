@@ -16,10 +16,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.network.NetworkMod;
 
 @Mod(modid = ModRBD.MODID, name = ModRBD.MODNAME, version = ModRBD.VERSION, acceptedMinecraftVersions = ModRBD.MINECRAFT_VERSION, dependencies = ModRBD.DEPENDENCIES)
-@NetworkMod(clientSideRequired = true, serverSideRequired = true)
 public class ModRBD extends GollumMod {
 
 	public final static String MODID = "RBD";
@@ -60,7 +58,6 @@ public class ModRBD extends GollumMod {
 		new BuildingParser().parse("dungeon1", this.MODID);
 		new BuildingParser().parse("dungeon1/levels/lvl_a", this.MODID);
 		// Charge la configuration
-		this.config = new ConfigRBD().loadConfig();
 		
 		// Test la version du mod
 		new VersionChecker();

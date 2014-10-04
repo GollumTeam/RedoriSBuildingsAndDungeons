@@ -11,6 +11,16 @@
 						"blocksSpawn":["minecraft:grass"]
 					}
 				}
+			},
+			"village1": {
+				"disabled": false,
+				"dimentions": {
+					"0": {
+						"spawnRate":6,
+						"spawnHeight":64,
+						"blocksSpawn":["minecraft:grass"]
+					}
+				}
 			}
 		}
 	}

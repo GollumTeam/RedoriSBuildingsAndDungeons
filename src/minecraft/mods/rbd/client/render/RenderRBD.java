@@ -2,7 +2,6 @@ package mods.rbd.client.render;
 
 import java.util.Hashtable;
 
-import mods.castledefenders.ModCastleDefenders;
 import mods.rbd.ModRBD;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.renderer.entity.RenderBiped;

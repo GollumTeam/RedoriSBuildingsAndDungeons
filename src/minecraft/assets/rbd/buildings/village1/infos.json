@@ -1,0 +1,38 @@
+{
+	"height": -150,
+	
+	"color" : [
+		{ "block": "minecraft:dirt" },
+		{ "block": "minecraft:snow" },
+		{ "block": "minecraft:quartz_block", "metadata": 1 },
+		{ "block": "minecraft:planks" },
+		{ "block": "minecraft:quartz_stairs", "orientation": "left" },
+		{ "block": "minecraft:quartz_stairs", "orientation": "up" },
+		{ "block": "minecraft:quartz_stairs", "orientation": "right" },
+		{ "block": "minecraft:quartz_stairs", "orientation": "down" },
+        { "block": "minecraft:wooden_door", "metadata": 0, "orientation": "up" },
+        { "block": "minecraft:wooden_door", "metadata": 0, "orientation": "right" },
+        { "block": "minecraft:wooden_door", "metadata": 0, "orientation": "down" },
+        { "block": "minecraft:wooden_door", "metadata": 0, "orientation": "left" },
+        { "block": "minecraft:wooden_door", "metadata": 8, "orientation": "up" },
+        { "block": "minecraft:wooden_door", "metadata": 8, "orientation": "right" },
+        { "block": "minecraft:wooden_door", "metadata": 8, "orientation": "down" },
+        { "block": "minecraft:wooden_door", "metadata": 8, "orientation": "left" },
+        { "block": "minecraft:stained_hardened_clay", "metadata": 8 },
+        { "block": "minecraft:log2" },
+        { "block": "minecraft:glass" },
+        { "block": "minecraft:water" },
+        { "block": "minecraft:glowstone" },
+        { "block": "minecraft:torch", "orientation": "up" },
+        { "block": "minecraft:torch", "orientation": "right" },
+        { "block": "minecraft:torch", "orientation": "down" },
+        { "block": "minecraft:torch", "orientation": "left" },
+        { "block": "minecraft:fence" },
+        { "block": "minecraft:sapling", "metadata": 1 }
+	],
+	"sets": {},
+	
+	"random": [],
+	
+	"randomBuildings": []
+}
