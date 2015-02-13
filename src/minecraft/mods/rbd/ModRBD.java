@@ -1,6 +1,7 @@
 package mods.rbd;
 
 import mods.gollum.core.common.building.BuildingParser;
+import mods.gollum.core.common.creativetab.GollumCreativeTabs;
 import mods.gollum.core.common.facory.Mobactory;
 import mods.gollum.core.common.i18n.I18n;
 import mods.gollum.core.common.log.Logger;
@@ -9,6 +10,7 @@ import mods.gollum.core.common.version.VersionChecker;
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
 import mods.rbd.common.entities.EntityFireFaery;
+import mods.rbd.common.inits.ModBlocks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -47,6 +49,11 @@ public class ModRBD extends GollumMod {
 	 */
 	public static ConfigRBD config;
 	
+	/**
+	 * Tab du mode creative
+	 */
+	public static GollumCreativeTabs tabRBD = new GollumCreativeTabs("RBDTab");
+	
 	@EventHandler public void handler(FMLPreInitializationEvent event)  { super.handler (event); }
 	@EventHandler public void handler(FMLInitializationEvent event)     { super.handler (event); }
 	@EventHandler public void handler(FMLPostInitializationEvent event) { super.handler (event); }
@@ -54,13 +61,12 @@ public class ModRBD extends GollumMod {
 	/** 1 **/
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
-
-		new BuildingParser().parse("dungeon1", this.MODID);
-		new BuildingParser().parse("dungeon1/levels/lvl_a", this.MODID);
-		// Charge la configuration
 		
 		// Test la version du mod
 		new VersionChecker();
+
+		// Initialisation des blocks
+		ModBlocks.init ();
 		
 	}
 	
@@ -73,6 +79,8 @@ public class ModRBD extends GollumMod {
 		
 		// Initialisation des Mobs
 		this.initMobs ();
+		
+		this.tabRBD.setIcon(ModBlocks.blockRewardCommon);
 		
 	}
 	
