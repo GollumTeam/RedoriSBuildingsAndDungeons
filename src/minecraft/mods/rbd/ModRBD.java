@@ -10,7 +10,8 @@ import mods.gollum.core.common.version.VersionChecker;
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
 import mods.rbd.common.entities.EntityFireFaery;
-import mods.rbd.common.inits.ModBlocks;
+import mods.rbd.inits.ModBlocks;
+import mods.rbd.inits.ModTileEntities;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -79,8 +80,11 @@ public class ModRBD extends GollumMod {
 		
 		// Initialisation des Mobs
 		this.initMobs ();
+
+		// Initialisation des TileEntities
+		ModTileEntities.init ();
 		
-		this.tabRBD.setIcon(ModBlocks.blockRewardCommon);
+		this.tabRBD.setIcon(ModBlocks.blockCommonReward);
 		
 	}
 	

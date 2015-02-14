@@ -8,7 +8,14 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityCommonReward extends TileEntity {
 	
-	int orientation = 0;
+	public int orientation = 0;
+
+	public TileEntityCommonReward() {
+	}
+	
+	public TileEntityCommonReward(int metadata) {
+		this.blockMetadata = metadata;
+	}
 	
 	
 	@Override

@@ -13,7 +13,7 @@ public class BlockUncommonReward extends BlockCommonReward {
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int metadata) {
-		return new TileEntityUncommonReward();
+		return new TileEntityUncommonReward(metadata);
 	}
 
 }
