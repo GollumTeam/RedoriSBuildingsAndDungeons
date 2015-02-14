@@ -11,6 +11,7 @@ import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
 import mods.rbd.common.entities.EntityFireFaery;
 import mods.rbd.inits.ModBlocks;
+import mods.rbd.inits.ModMobs;
 import mods.rbd.inits.ModTileEntities;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -79,28 +80,18 @@ public class ModRBD extends GollumMod {
 		proxy.registerRenderers();
 		
 		// Initialisation des Mobs
-		this.initMobs ();
+		ModMobs.init ();
 
 		// Initialisation des TileEntities
 		ModTileEntities.init ();
 		
-		this.tabRBD.setIcon(ModBlocks.blockCommonReward);
+		this.tabRBD.setIcon(ModBlocks.blockLightRewardOn);
 		
 	}
 	
 	/** 3 **/
 	@Override
 	public void postInit(FMLPostInitializationEvent event) {
-	}
-	
-
-	/**
-	 * Enregistrement des Mobs
-	 */
-	private void initMobs () {
-		
-		new Mobactory().register(EntityFireFaery.class, "FireFaery", 0x333333, 0xFF0000);;
-		
 	}
 	
 }

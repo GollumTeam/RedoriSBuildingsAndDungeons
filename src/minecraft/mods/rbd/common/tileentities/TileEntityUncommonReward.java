@@ -1,6 +1,6 @@
 package mods.rbd.common.tileentities;
 
-public class TileEntityUncommonReward extends TileEntityCommonReward {
+public class TileEntityUncommonReward extends TileEntityReward {
 	
 	public TileEntityUncommonReward() {
 	}

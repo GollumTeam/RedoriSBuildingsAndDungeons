@@ -1,27 +1,27 @@
 package mods.rbd.client;
 
 import mods.gollum.core.tools.registry.RenderingRegistry;
-import mods.rbd.client.model.ModelFaery;
-import mods.rbd.client.render.CommonRewardBlockRenderer;
+import mods.rbd.client.model.mobs.ModelFaery;
 import mods.rbd.client.render.RBDInventoryRenderer;
-import mods.rbd.client.render.RenderFaery;
+import mods.rbd.client.render.blocks.LightRewardBlockRenderer;
+import mods.rbd.client.render.mobs.RenderFaery;
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.entities.EntityFireFaery;
-import mods.rbd.common.tileentities.TileEntityCommonReward;
+import mods.rbd.common.tileentities.TileEntityLightReward;
 import cpw.mods.fml.client.registry.ClientRegistry;
 //import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxyRBD extends CommonProxyRBD {
 
-	public static int idCommonRewardBlockRenderer;
+	public static int idLightRewardBlockRenderer;
 	
 	public void registerRenderers() {
 		
-		this.idCommonRewardBlockRenderer = RenderingRegistry.registerBlockHandler(new RBDInventoryRenderer());
+		this.idLightRewardBlockRenderer = RenderingRegistry.registerBlockHandler(new RBDInventoryRenderer());
 		
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCommonReward.class, new CommonRewardBlockRenderer());
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLightReward.class, new LightRewardBlockRenderer());
 		
-		cpw.mods.fml.client.registry.RenderingRegistry.registerEntityRenderingHandler(EntityFireFaery.class, new RenderFaery(new ModelFaery(), 1.0F, "FireFaery"));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFireFaery.class, new RenderFaery(new ModelFaery(), 1.0F, "FireFaery"));
 		
 	}
 	
