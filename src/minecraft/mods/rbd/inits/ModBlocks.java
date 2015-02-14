@@ -1,8 +1,10 @@
 package mods.rbd.inits;
 
+import mods.gollum.core.tools.registry.BuildingBlockRegistry;
 import mods.rbd.common.blocks.BlockCommonReward;
 import mods.rbd.common.blocks.BlockLightReward;
 import mods.rbd.common.blocks.BlockUncommonReward;
+import mods.rbd.common.building.handler.BlockRewardBuildingHandler;
 
 
 public class ModBlocks {
@@ -17,5 +19,7 @@ public class ModBlocks {
 		ModBlocks.blockLightRewardOff = new BlockLightReward    ("lightRewardOff", false);
 		ModBlocks.blockCommonReward   = new BlockCommonReward   ("commonReward");
 		ModBlocks.blockUncommonReward = new BlockUncommonReward ("uncommonReward");
+		
+		BuildingBlockRegistry.register(new BlockRewardBuildingHandler());
 	}
 }
