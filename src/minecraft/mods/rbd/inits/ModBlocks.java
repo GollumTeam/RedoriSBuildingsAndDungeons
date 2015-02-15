@@ -1,10 +1,11 @@
 package mods.rbd.inits;
 
-import mods.gollum.core.tools.registry.BuildingBlockRegistry;
 import mods.rbd.common.blocks.BlockCommonReward;
 import mods.rbd.common.blocks.BlockLightReward;
 import mods.rbd.common.blocks.BlockUncommonReward;
 import mods.rbd.common.building.handler.BlockRewardBuildingHandler;
+
+import com.gollum.core.tools.registry.BuildingBlockRegistry;
 
 
 public class ModBlocks {

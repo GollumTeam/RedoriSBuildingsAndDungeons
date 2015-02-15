@@ -2,6 +2,13 @@ package mods.rbd.common.blocks;
 
 import static net.minecraftforge.common.util.ForgeDirection.DOWN;
 import static net.minecraftforge.common.util.ForgeDirection.UP;
+
+import com.gollum.core.common.blocks.IBlockDisplayInfos;
+import com.gollum.core.tools.helper.blocks.HBlockContainerMetadata;
+
+import mods.rbd.ModRBD;
+import mods.rbd.client.ClientProxyRBD;
+import mods.rbd.common.tileentities.TileEntityReward;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -11,11 +18,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-import mods.gollum.core.common.blocks.IBlockDisplayInfos;
-import mods.gollum.core.tools.helper.blocks.HBlockContainerMetadata;
-import mods.rbd.ModRBD;
-import mods.rbd.client.ClientProxyRBD;
-import mods.rbd.common.tileentities.TileEntityReward;
 
 public abstract class BlockReward extends HBlockContainerMetadata implements IBlockDisplayInfos {
 

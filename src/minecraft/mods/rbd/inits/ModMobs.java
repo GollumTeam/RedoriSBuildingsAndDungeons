@@ -1,10 +1,12 @@
 package mods.rbd.inits;
 
-import mods.gollum.core.common.facory.Mobactory;
 import mods.rbd.common.entities.EntityFireFaery;
 import mods.rbd.common.entities.EntityIceFaery;
 import mods.rbd.common.tileentities.TileEntityLightReward;
 import mods.rbd.common.tileentities.TileEntityUncommonReward;
+
+import com.gollum.core.common.facory.Mobactory;
+
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModMobs {
