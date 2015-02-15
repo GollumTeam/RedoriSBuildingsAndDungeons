@@ -17,15 +17,24 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 		int subBlock = ((IBlockMetadataHelper)ModBlocks.blockLightRewardOn).getEnabledMetadata(metadata);
 		
 		
-		this.scale = 1.0;
 		
 		switch (subBlock) {
 			default:
 			case 0:
 				this.scale = 0.5;
 				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, (rotation+90)%360);
+				this.rendedModelBoard (x, y, z, (rotation+90)%360);
+				this.scale = 1.0;
 				
 				break;
 		}
+	}
+	
+	protected void rendedModelBoard (double x, double y, double z, float rotation) {
+		this.alpha = 0.65F;
+		this.beforeRender("strangegame", x, y, z, rotation);
+		this.modelStrangeGame.renderModelBoard(0.0625F);
+		this.endRender();
+		this.alpha = 1.0F;
 	}
 }

@@ -18,6 +18,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	private HashMap<String, ResourceLocation> textures = new HashMap<String, ResourceLocation>();
 	protected double scale = 1.0;
 	protected boolean light;
+	protected float alpha = 1.0F;
 
 	@Override
 	public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f) {
@@ -64,6 +65,13 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glScaled(this.scale , this.scale, this.scale);
+		
+		if (this.alpha != 1.0F) {
+			GL11.glEnable(GL11.GL_BLEND);
+			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+			GL11.glColor4f(1F, 1F, 1F, this.alpha);
+		}
+		
 		this.bindTexture(this.getTexture(textureName));
 		GL11.glPushMatrix();
 		if (this.light) {
@@ -75,6 +83,10 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	
 	protected void endRender() {
 		GL11.glPopMatrix();
+		if (this.alpha != 1.0F) {
+			GL11.glDisable(GL11.GL_BLEND);
+			GL11.glColor4f(1f, 1f, 1f, 1f);
+		}
 		GL11.glPopMatrix();
 	}
 	

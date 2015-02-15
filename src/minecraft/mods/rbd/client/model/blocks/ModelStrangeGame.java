@@ -184,15 +184,8 @@ public class ModelStrangeGame extends ModelBase implements IRBDModel {
 
 	@Override
 	public void renderModel(float f5) {
-		board1.render(f5);
-		board2.render(f5);
-		board3.render(f5);
-		support.render(f5);
-		atkboard1.render(f5);
-		atkboard2.render(f5);
-		atkboard3.render(f5);
-		atkboard4.render(f5);
 		base.render(f5);
+		support.render(f5);
 		whitepiece3b.render(f5);
 		blackpiece1.render(f5);
 		whitepiece2.render(f5);
@@ -207,6 +200,15 @@ public class ModelStrangeGame extends ModelBase implements IRBDModel {
 		whitepiece5.render(f5);
 		blackpiece6.render(f5);
 		whitepiece6.render(f5);
+	}
+	public void renderModelBoard(float f5) {
+		board1.render(f5);
+		board2.render(f5);
+		board3.render(f5);
+		atkboard1.render(f5);
+		atkboard2.render(f5);
+		atkboard3.render(f5);
+		atkboard4.render(f5);
 	}
 	
 	private void setRotation(ModelRenderer model, float x, float y, float z) {

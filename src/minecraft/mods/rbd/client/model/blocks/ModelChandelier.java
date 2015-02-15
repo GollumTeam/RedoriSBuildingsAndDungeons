@@ -241,6 +241,14 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 	
 	@Override
 	public void renderModel(float f5) {
+		bougie5.render(f5);
+		bougie2.render(f5);
+		bougie3.render(f5);
+		bougie4.render(f5);
+		bougie1.render(f5);
+	}
+	
+	public void renderModelBase(float f5) {
 		socle.render(f5);
 		corps1.render(f5);
 		corps3.render(f5);
@@ -256,13 +264,7 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 		base3.render(f5);
 		base1.render(f5);
 		base4.render(f5);
-		bougie5.render(f5);
-		bougie2.render(f5);
-		bougie3.render(f5);
-		bougie4.render(f5);
-		bougie1.render(f5);
 	}
-	
 	public void renderModelFire(float f5) {
 		flamme1a.render(f5);
 		flamme1b.render(f5);

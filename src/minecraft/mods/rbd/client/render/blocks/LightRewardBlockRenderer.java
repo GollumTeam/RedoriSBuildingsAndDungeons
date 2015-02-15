@@ -24,6 +24,7 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 			default:
 			case 0:
 				this.light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
+				this.rendedModelBase (x, y, z, rotation);
 				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation);
 				
 				if (this.light) {
@@ -32,6 +33,14 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				
 				break;
 		}
+	}
+	
+	protected void rendedModelBase (double x, double y, double z, float rotation) {
+		this.alpha = 0.50F;
+		this.beforeRender("chandelier", x, y, z, rotation);
+		this.modelChandelier.renderModelBase(0.0625F);
+		this.endRender();
+		this.alpha = 1.0F;
 	}
 	
 	protected void rendedModelFire (double x, double y, double z, float rotation) {
