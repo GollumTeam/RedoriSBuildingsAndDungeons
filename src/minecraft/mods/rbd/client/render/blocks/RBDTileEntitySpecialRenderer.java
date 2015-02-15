@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import mods.rbd.ModRBD;
 import mods.rbd.client.model.IRBDModel;
+import mods.rbd.common.tileentities.TileEntityReward;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.RenderHelper;
@@ -16,15 +17,27 @@ import org.lwjgl.opengl.GL11;
 public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRenderer {
 	private HashMap<String, ResourceLocation> textures = new HashMap<String, ResourceLocation>();
 	protected double scale = 1.0;
+	protected boolean light;
 
 	@Override
 	public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f) {
 		try {
 			int metadata;
-			boolean invRender = false;
 			metadata = tileEntity.getBlockMetadata();
+			float rotation = 0;
+			switch (((TileEntityReward)tileEntity).orientation) {
+				default:
+				case 0:
+					rotation = 180; break;
+				case 1:
+					rotation = 90; break;
+				case 2:
+					rotation = 0; break;
+				case 3:
+					rotation = 270; break;
+			}
 			
-			this.renderTileEntityAt(tileEntity, x, y, z, f, metadata, invRender);
+			this.renderTileEntityAt(tileEntity, x, y, z, f, metadata, rotation);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -38,12 +51,8 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		this.textures.put(name, texture);
 		return texture;
 	}
-
-	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation) {
-		this.renderModel(model, textureName, x, y, z, rotation, false);
-	}
 	
-	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation, boolean light) {
+	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
@@ -51,7 +60,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		GL11.glScaled(this.scale , this.scale, this.scale);
 		this.bindTexture(this.getTexture(textureName));
 		GL11.glPushMatrix();
-		if (light) {
+		if (this.light) {
 			RenderHelper.disableStandardItemLighting();
 		} else {
 			RenderHelper.enableStandardItemLighting();
@@ -63,5 +72,5 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		GL11.glPopMatrix();
 	}
 	
-	protected abstract void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, boolean invRender);
+	protected abstract void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, float rotation);
 }

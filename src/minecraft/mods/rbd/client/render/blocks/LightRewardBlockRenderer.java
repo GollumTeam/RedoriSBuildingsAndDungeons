@@ -13,31 +13,20 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 	
 	private ModelChandelier modelChandelier = new ModelChandelier();
 	
-	protected void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, boolean invRender) {
+	@Override
+	protected void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, float rotation) {
 		
 		TileEntityLightReward tileEntityLightReward = (TileEntityLightReward)tileEntity;
-		float rotation = 0;
 		int subBlock = ((IBlockMetadataHelper)ModBlocks.blockLightRewardOn).getEnabledMetadata(metadata);
 		
-		switch (tileEntityLightReward.orientation) {
-			default:
-			case 0:
-				rotation = 180; break;
-			case 1:
-				rotation = 90; break;
-			case 2:
-				rotation = 0; break;
-			case 3:
-				rotation = 270; break;
-		}
-
+		this.light = false;
 		switch (subBlock) {
 			default:
 			case 0:
-				boolean light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
-				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation, light);
+				this.light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
+				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation);
 				
-				if (light) {
+				if (this.light) {
 					this.rendedModelFire (x, y, z, rotation);
 				}
 				
