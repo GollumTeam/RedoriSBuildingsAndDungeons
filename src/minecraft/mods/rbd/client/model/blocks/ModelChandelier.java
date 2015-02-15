@@ -27,14 +27,16 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 	ModelRenderer bougie3;
 	ModelRenderer bougie4;
 	ModelRenderer bougie1;
-	ModelRenderer flamme23;
-	ModelRenderer flamme14;
+	ModelRenderer flamme1a;
+	ModelRenderer flamme2a;
+	ModelRenderer flamme3a;
+	ModelRenderer flamme3b;
+	ModelRenderer flamme4a;
+	ModelRenderer flamme4b;
+	ModelRenderer flamme1b;
+	ModelRenderer flamme2b;
 	ModelRenderer flamme5a;
 	ModelRenderer flamme5b;
-	ModelRenderer flamme2;
-	ModelRenderer flamme3;
-	ModelRenderer flamme1;
-	ModelRenderer flamme4;
 
 	public ModelChandelier() {
 		textureWidth = 32;
@@ -160,54 +162,75 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 		bougie1.setTextureSize(32, 32);
 		bougie1.mirror = true;
 		setRotation(bougie1, 0F, 0F, 0F);
-		flamme23 = new ModelRenderer(this, 0, 12);
-		flamme23.addBox(0F, 0F, 0F, 8, 1, 0);
-		flamme23.setRotationPoint(-4F, 10F, -2F);
-		flamme23.setTextureSize(32, 32);
-		flamme23.mirror = true;
-		setRotation(flamme23, 0F, 0F, 0F);
-		flamme14 = new ModelRenderer(this, 0, 11);
-		flamme14.addBox(0F, 0F, 0F, 11, 1, 0);
-		flamme14.setRotationPoint(-5.5F, 13.5F, 2F);
-		flamme14.setTextureSize(32, 32);
-		flamme14.mirror = true;
-		setRotation(flamme14, 0F, 0F, 0F);
-		flamme5a = new ModelRenderer(this, 0, 10);
-		flamme5a.addBox(0F, 0F, 0F, 1, 1, 0);
+		
+		flamme1a = new ModelRenderer(this, 0, 11);
+		flamme1a.addBox(-8.0F, 40.5F, 12.0F, 4, 4, 0);
+		flamme1a.setRotationPoint(4F, 13.5F, 2F);
+		flamme1a.setTextureSize(32, 32);
+		flamme1a.mirror = true;
+		setRotation(flamme1a, 0F, 1.570796F, 0F);
+		
+		flamme1b = new ModelRenderer(this, 0, 11);
+		flamme1b.addBox(19.5F, 40.5F, 6.0F, 4, 4, 0);
+		flamme1b.setRotationPoint(-5.5F, 13.5F, 2F);
+		flamme1b.setTextureSize(32, 32);
+		flamme1b.mirror = true;
+		
+		flamme2a = new ModelRenderer(this, 0, 11);
+		flamme2a.addBox(4.0F, 30.0F, 7.5F, 4, 4, 0);
+		flamme2a.setRotationPoint(2.5F, 10F, -2F);
+		flamme2a.setTextureSize(32, 32);
+		flamme2a.mirror = true;
+		setRotation(flamme2a, 0F, 1.570796F, 0F);
+		
+		flamme2b = new ModelRenderer(this, 0, 11);
+		flamme2b.addBox(-8.0F, 30F, -6.0F, 4, 4, 0);
+		flamme2b.setRotationPoint(-4F, 10F, -2F);
+		flamme2b.setTextureSize(32, 32);
+		flamme2b.mirror = true;
+		setRotation(flamme2b, 0F, 0F, 0F);
+		
+		flamme3a = new ModelRenderer(this, 0, 11);
+		flamme3a.addBox(4.0F, 30F, -7.5F, 4, 4, 0);
+		flamme3a.setRotationPoint(-2.5F, 10F, -2F);
+		flamme3a.setTextureSize(32, 32);
+		flamme3a.mirror = true;
+		setRotation(flamme3a, 0F, 1.570796F, 0F);
+		
+		flamme3b = new ModelRenderer(this, 0, 11);
+		flamme3b.addBox(12.0F, 30F, -6.0F, 4, 4, 0);
+		flamme3b.setRotationPoint(-4F, 10F, -2F);
+		flamme3b.setTextureSize(32, 32);
+		flamme3b.mirror = true;
+		setRotation(flamme2b, 0F, 0F, 0F);
+		
+		flamme4a = new ModelRenderer(this, 0, 11);
+		flamme4a.addBox(-8.0F, 40.5F, -12F, 4, 4, 0);
+		flamme4a.setRotationPoint(-4F, 13.5F, 2F);
+		flamme4a.setTextureSize(32, 32);
+		flamme4a.mirror = true;
+		setRotation(flamme4a, 0F, 1.570796F, 0F);
+		
+		flamme4b = new ModelRenderer(this, 0, 11);
+		flamme4b.addBox(-12.5F, 40.5F, 6.0F, 4, 4, 0);
+		flamme4b.setRotationPoint(-5.5F, 13.5F, 2F);
+		flamme4b.setTextureSize(32, 32);
+		flamme4b.mirror = true;
+		
+		setRotation(flamme4b, 0F, 0F, 0F);
+		flamme5a = new ModelRenderer(this, 0, 11);
+		flamme5a.addBox(-1.5F, 24.0F, 0F, 4, 4, 0);
 		flamme5a.setRotationPoint(-0.5F, 8F, 0F);
 		flamme5a.setTextureSize(32, 32);
 		flamme5a.mirror = true;
 		setRotation(flamme5a, 0F, 0F, 0F);
-		flamme5b = new ModelRenderer(this, 0, 10);
-		flamme5b.addBox(-0.5F, 0F, 0F, 1, 1, 0);
+		
+		flamme5b = new ModelRenderer(this, 0, 11);
+		flamme5b.addBox(-2.0F, 24.0F, 0F, 4, 4, 0);
 		flamme5b.setRotationPoint(0F, 8F, 0F);
 		flamme5b.setTextureSize(32, 32);
 		flamme5b.mirror = true;
 		setRotation(flamme5b, 0F, 1.570796F, 0F);
-		flamme2 = new ModelRenderer(this, 0, 10);
-		flamme2.addBox(-0.5F, 0F, 0F, 1, 1, 0);
-		flamme2.setRotationPoint(2.5F, 10F, -2F);
-		flamme2.setTextureSize(32, 32);
-		flamme2.mirror = true;
-		setRotation(flamme2, 0F, 1.570796F, 0F);
-		flamme3 = new ModelRenderer(this, 0, 10);
-		flamme3.addBox(-0.5F, 0F, 0F, 1, 1, 0);
-		flamme3.setRotationPoint(-2.5F, 10F, -2F);
-		flamme3.setTextureSize(32, 32);
-		flamme3.mirror = true;
-		setRotation(flamme3, 0F, 1.570796F, 0F);
-		flamme1 = new ModelRenderer(this, 0, 10);
-		flamme1.addBox(-0.5F, 0F, 0F, 1, 1, 0);
-		flamme1.setRotationPoint(4F, 13.5F, 2F);
-		flamme1.setTextureSize(32, 32);
-		flamme1.mirror = true;
-		setRotation(flamme1, 0F, 1.570796F, 0F);
-		flamme4 = new ModelRenderer(this, 0, 10);
-		flamme4.addBox(-0.5F, 0F, 0F, 1, 1, 0);
-		flamme4.setRotationPoint(-4F, 13.5F, 2F);
-		flamme4.setTextureSize(32, 32);
-		flamme4.mirror = true;
-		setRotation(flamme4, 0F, 1.570796F, 0F);
 	}
 
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
@@ -241,14 +264,16 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 	}
 	
 	public void renderModelFire(float f5) {
-		flamme23.render(f5);
-		flamme14.render(f5);
+		flamme1a.render(f5);
+		flamme1b.render(f5);
+		flamme2a.render(f5);
+		flamme2b.render(f5);
+		flamme3a.render(f5);
+		flamme3b.render(f5);
+		flamme4a.render(f5);
+		flamme4b.render(f5);
 		flamme5a.render(f5);
 		flamme5b.render(f5);
-		flamme2.render(f5);
-		flamme3.render(f5);
-		flamme1.render(f5);
-		flamme4.render(f5);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {

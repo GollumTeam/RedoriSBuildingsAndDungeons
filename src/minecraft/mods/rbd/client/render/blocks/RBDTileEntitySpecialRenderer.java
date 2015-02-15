@@ -4,7 +4,9 @@ import java.util.HashMap;
 
 import mods.rbd.ModRBD;
 import mods.rbd.client.model.IRBDModel;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
@@ -31,18 +33,27 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		if (this.textures.containsKey(name)) {
 			return this.textures.get(name);
 		}
-		ResourceLocation texture = new ResourceLocation(ModRBD.MODID.toLowerCase() + ":textures/models/" + name + ".png");
+		ResourceLocation texture = new ResourceLocation(ModRBD.MODID.toLowerCase() + ":textures/blocks/" + name + ".png");
 		this.textures.put(name, texture);
 		return texture;
 	}
 
 	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation) {
+		this.renderModel(model, textureName, x, y, z, rotation, false);
+	}
+	
+	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation, boolean light) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
 		this.bindTexture(this.getTexture(textureName));
 		GL11.glPushMatrix();
+		if (light) {
+			RenderHelper.disableStandardItemLighting();
+		} else {
+			RenderHelper.enableStandardItemLighting();
+		}
 		
 		model.renderModel(0.0625F);
 		
