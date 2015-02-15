@@ -52,7 +52,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		if (this.textures.containsKey(name)) {
 			return this.textures.get(name);
 		}
-		ResourceLocation texture = new ResourceLocation(ModRBD.MODID.toLowerCase() + ":textures/blocks/" + name + ".png");
+		ResourceLocation texture = new ResourceLocation(ModRBD.MODID.toLowerCase() + ":textures/models/" + name + ".png");
 		this.textures.put(name, texture);
 		return texture;
 	}

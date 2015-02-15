@@ -26,10 +26,6 @@ public abstract class BlockReward extends HBlockContainerMetadata implements IBl
 	}
 	
 	@Override
-	public void registerBlockIcons(IIconRegister iconRegister) {
-	}
-	
-	@Override
 	public String displayDebugInfos(World world, int x, int y, int z) {
 		String infos = "";
 		TileEntity te = world.getTileEntity(x, y, z);
