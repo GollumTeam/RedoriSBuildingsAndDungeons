@@ -35,18 +35,10 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 	}
 	
 	protected void rendedModelFire (double x, double y, double z, float rotation) {
-		GL11.glPushMatrix();
-		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
-		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glScaled(0.25, 0.25, 0.25);
-		this.bindTexture(this.getTexture("chandelier"));
-		GL11.glPushMatrix();
-		RenderHelper.disableStandardItemLighting();
-		
+		this.scale = 0.25;
+		beforeRender("chandelier", x, y, z, rotation);
 		this.modelChandelier.renderModelFire(0.0625F);
-		
-		GL11.glPopMatrix();
-		GL11.glPopMatrix();
+		endRender();
+		this.scale = 1.0;
 	}
 }
