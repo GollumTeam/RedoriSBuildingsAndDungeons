@@ -1,18 +1,19 @@
 package mods.rbd;
 
-import mods.gollum.core.common.building.BuildingParser;
 import mods.gollum.core.common.creativetab.GollumCreativeTabs;
-import mods.gollum.core.common.facory.Mobactory;
 import mods.gollum.core.common.i18n.I18n;
 import mods.gollum.core.common.log.Logger;
 import mods.gollum.core.common.mod.GollumMod;
 import mods.gollum.core.common.version.VersionChecker;
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
-import mods.rbd.common.entities.EntityFireFaery;
+import mods.rbd.inits.ModAchievements;
 import mods.rbd.inits.ModBlocks;
 import mods.rbd.inits.ModMobs;
 import mods.rbd.inits.ModTileEntities;
+import net.minecraft.init.Blocks;
+import net.minecraft.stats.Achievement;
+import net.minecraftforge.common.AchievementPage;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -69,7 +70,6 @@ public class ModRBD extends GollumMod {
 
 		// Initialisation des blocks
 		ModBlocks.init ();
-		
 	}
 	
 	/** 2 **/ 
@@ -84,6 +84,10 @@ public class ModRBD extends GollumMod {
 
 		// Initialisation des TileEntities
 		ModTileEntities.init ();
+		
+		// Initialisation des Achievements
+		ModAchievements.init();
+		
 		
 		this.tabRBD.setIcon(ModBlocks.blockLightRewardOn);
 		
