@@ -1,0 +1,10 @@
+{
+	"height":-1,
+	"color" : [
+		{ "block": "minecraft:stone" }
+	],
+	
+	"sets": {
+		"1x1x3":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"down" }
+	}
+}
