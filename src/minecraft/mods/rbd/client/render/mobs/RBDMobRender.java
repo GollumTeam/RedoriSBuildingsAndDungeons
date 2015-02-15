@@ -29,7 +29,7 @@ public class RBDMobRender extends RenderBiped {
 		if (cacheResource.containsKey(name)) {
 			texture = cacheResource.get(name);
 		} else {
-			texture = new ResourceLocation(ModRBD.MODID.toLowerCase()+":models/"+name+".png");
+			texture = new ResourceLocation(ModRBD.MODID.toLowerCase()+":textures/models/"+name+".png");
 			cacheResource.put(name, texture);
 		}
 		
