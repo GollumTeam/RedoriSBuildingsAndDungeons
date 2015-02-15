@@ -37,15 +37,6 @@ public class BlockLightReward extends BlockReward {
 		return Item.getItemFromBlock(ModBlocks.blockLightRewardOn);
 	}
 	
-	//////////////////////////
-	// Gestion des textures //
-	//////////////////////////
-	
-	@Override
-	public int getRenderType() {
-		return ClientProxyRBD.idLightRewardBlockRenderer;
-	}
-	
 	///////////
 	// Event //
 	///////////

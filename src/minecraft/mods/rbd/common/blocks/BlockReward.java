@@ -49,6 +49,11 @@ public abstract class BlockReward extends HBlockContainerMetadata implements IBl
 		return false;
 	}
 	
+	@Override
+	public int getRenderType() {
+		return ClientProxyRBD.idRewardBlockRenderer;
+	}
+	
 	///////////
 	// Event //
 	///////////

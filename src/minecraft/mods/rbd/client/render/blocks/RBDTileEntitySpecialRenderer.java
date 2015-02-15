@@ -15,6 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRenderer {
 	private HashMap<String, ResourceLocation> textures = new HashMap<String, ResourceLocation>();
+	protected double scale = 1.0;
 
 	@Override
 	public void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f) {
@@ -47,6 +48,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
+		GL11.glScaled(this.scale , this.scale, this.scale);
 		this.bindTexture(this.getTexture(textureName));
 		GL11.glPushMatrix();
 		if (light) {
