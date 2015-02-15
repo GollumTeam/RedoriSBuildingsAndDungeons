@@ -1,10 +1,11 @@
 package mods.rbd;
 
-import mods.gollum.core.common.creativetab.GollumCreativeTabs;
-import mods.gollum.core.common.i18n.I18n;
-import mods.gollum.core.common.log.Logger;
-import mods.gollum.core.common.mod.GollumMod;
-import mods.gollum.core.common.version.VersionChecker;
+import com.gollum.core.common.creativetab.GollumCreativeTabs;
+import com.gollum.core.common.i18n.I18n;
+import com.gollum.core.common.log.Logger;
+import com.gollum.core.common.mod.GollumMod;
+import com.gollum.core.common.version.VersionChecker;
+
 import mods.rbd.common.CommonProxyRBD;
 import mods.rbd.common.config.ConfigRBD;
 import mods.rbd.inits.ModAchievements;

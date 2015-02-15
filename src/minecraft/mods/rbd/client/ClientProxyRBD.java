@@ -1,6 +1,5 @@
 package mods.rbd.client;
 
-import mods.gollum.core.tools.registry.RenderingRegistry;
 import mods.rbd.client.model.mobs.ModelFaery;
 import mods.rbd.client.render.RBDInventoryRenderer;
 import mods.rbd.client.render.blocks.CommonRewardBlockRenderer;
@@ -11,6 +10,9 @@ import mods.rbd.common.entities.EntityFireFaery;
 import mods.rbd.common.entities.EntityIceFaery;
 import mods.rbd.common.tileentities.TileEntityCommonReward;
 import mods.rbd.common.tileentities.TileEntityLightReward;
+
+import com.gollum.core.tools.registry.RenderingRegistry;
+
 import cpw.mods.fml.client.registry.ClientRegistry;
 //import cpw.mods.fml.client.registry.RenderingRegistry;
 

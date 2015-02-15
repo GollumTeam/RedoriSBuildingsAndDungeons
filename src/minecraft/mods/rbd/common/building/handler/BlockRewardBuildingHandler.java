@@ -1,8 +1,9 @@
 package mods.rbd.common.building.handler;
 
-import mods.gollum.core.ModGollumCoreLib;
-import mods.gollum.core.common.building.Building.Unity;
-import mods.gollum.core.common.building.handler.BuildingBlockHandler;
+import com.gollum.core.ModGollumCoreLib;
+import com.gollum.core.common.building.Building.Unity;
+import com.gollum.core.common.building.handler.BuildingBlockHandler;
+
 import mods.rbd.common.blocks.BlockReward;
 import mods.rbd.common.tileentities.TileEntityReward;
 import net.minecraft.block.Block;

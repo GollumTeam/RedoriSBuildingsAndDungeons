@@ -1,6 +1,7 @@
 package mods.rbd.client.render.blocks;
 
-import mods.gollum.core.tools.helper.IBlockMetadataHelper;
+import com.gollum.core.tools.helper.IBlockMetadataHelper;
+
 import mods.rbd.client.model.blocks.ModelStrangeGame;
 import mods.rbd.common.tileentities.TileEntityCommonReward;
 import mods.rbd.inits.ModBlocks;

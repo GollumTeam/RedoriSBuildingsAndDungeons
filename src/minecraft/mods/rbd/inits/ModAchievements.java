@@ -1,15 +1,15 @@
 package mods.rbd.inits;
 
+import mods.rbd.ModRBD;
+import mods.rbd.common.tileentities.TileEntityCommonReward;
+import mods.rbd.common.tileentities.TileEntityLightReward;
+import mods.rbd.common.tileentities.TileEntityUncommonReward;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
-import mods.rbd.ModRBD;
-import mods.rbd.common.tileentities.TileEntityCommonReward;
-import mods.rbd.common.tileentities.TileEntityLightReward;
-import mods.rbd.common.tileentities.TileEntityUncommonReward;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModAchievements {
