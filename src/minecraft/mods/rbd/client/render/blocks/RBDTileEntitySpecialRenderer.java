@@ -53,9 +53,9 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	}
 	
 	protected void renderModel(IRBDModel model, String textureName, double x, double y, double z, float rotation) {
-		beforeRender(textureName, x, y, z, rotation);
+		this.beforeRender(textureName, x, y, z, rotation);
 		model.renderModel(0.0625F);
-		endRender();
+		this.endRender();
 	}
 	
 	protected void beforeRender(String textureName, double x, double y, double z, float rotation) {

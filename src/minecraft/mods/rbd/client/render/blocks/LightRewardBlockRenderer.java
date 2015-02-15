@@ -36,9 +36,9 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 	
 	protected void rendedModelFire (double x, double y, double z, float rotation) {
 		this.scale = 0.25;
-		beforeRender("chandelier", x, y, z, rotation);
+		this.beforeRender("chandelier", x, y, z, rotation);
 		this.modelChandelier.renderModelFire(0.0625F);
-		endRender();
+		this.endRender();
 		this.scale = 1.0;
 	}
 }
