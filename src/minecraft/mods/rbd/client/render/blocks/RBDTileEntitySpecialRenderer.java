@@ -16,8 +16,10 @@ import org.lwjgl.opengl.GL11;
 
 public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRenderer {
 	private HashMap<String, ResourceLocation> textures = new HashMap<String, ResourceLocation>();
-	protected double scale = 1.0;
+	protected boolean isInventory;
 	protected boolean light;
+	protected double scale = 1.0;
+	protected double scaleInventory = 1.0;
 	protected float alpha = 1.0F;
 
 	@Override
@@ -37,6 +39,8 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 				case 3:
 					rotation = 270; break;
 			}
+			
+			this.isInventory = tileEntity.getWorldObj() == null;
 			
 			this.renderTileEntityAt(tileEntity, x, y, z, f, metadata, rotation);
 		} catch (Exception e) {
@@ -61,12 +65,16 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	
 	protected void beforeRender(String textureName, double x, double y, double z, float rotation) {
 		GL11.glPushMatrix();
-		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
+		GL11.glTranslatef((float) x + 0.5F, (float) y + 0.5F + (float)(this.isInventory ? this.scaleInventory : 1.0), (float) z + 0.5F);
 		GL11.glRotatef((float) rotation, 0.0F, 1.0F, 0.0F);
 		GL11.glRotatef(180.0F, 0.0F, 0.0F, 1.0F);
-		GL11.glScaled(this.scale , this.scale, this.scale);
+		GL11.glScaled(
+			this.scale * (this.isInventory ? this.scaleInventory : 1.0),
+			this.scale * (this.isInventory ? this.scaleInventory : 1.0), 
+			this.scale * (this.isInventory ? this.scaleInventory : 1.0)
+		);
 		
-		if (this.alpha != 1.0F) {
+		if (this.alpha != 1.0F && !this.isInventory) {
 			GL11.glEnable(GL11.GL_BLEND);
 			GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 			GL11.glColor4f(1F, 1F, 1F, this.alpha);
@@ -83,7 +91,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	
 	protected void endRender() {
 		GL11.glPopMatrix();
-		if (this.alpha != 1.0F) {
+		if (this.alpha != 1.0F && !this.isInventory) {
 			GL11.glDisable(GL11.GL_BLEND);
 			GL11.glColor4f(1f, 1f, 1f, 1f);
 		}

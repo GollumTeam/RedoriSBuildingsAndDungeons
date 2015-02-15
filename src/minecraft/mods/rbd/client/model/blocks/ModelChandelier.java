@@ -95,13 +95,13 @@ public class ModelChandelier extends ModelBase implements IRBDModel {
 		bras2.setRotationPoint(1F, 19F, -1F);
 		bras2.setTextureSize(32, 32);
 		bras2.mirror = true;
-		setRotation(bras2, 0F, 0.5235988F, -2.6529F);
+		setRotation(bras2, -2.6529F, -1.0F, -0.0F);
 		bras3 = new ModelRenderer(this, 25, 0);
 		bras3.addBox(-0.5F, -0.5F, -0.5F, 1, 5, 1);
 		bras3.setRotationPoint(-1F, 19F, -1F);
 		bras3.setTextureSize(32, 32);
 		bras3.mirror = true;
-		setRotation(bras3, 0F, -0.5235988F, 2.6529F);
+		setRotation(bras3, -2.6529F, 1.0F, -0.0F);
 		base5 = new ModelRenderer(this, 4, 8);
 		base5.addBox(-1F, 0F, -1F, 2, 1, 2);
 		base5.setRotationPoint(0F, 13F, 0F);

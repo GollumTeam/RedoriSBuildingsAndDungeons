@@ -23,9 +23,11 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 		switch (subBlock) {
 			default:
 			case 0:
+				this.scaleInventory = 1.5F;
 				this.light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
 				this.rendedModelBase (x, y, z, rotation);
 				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation);
+				this.scaleInventory = 1.0F;
 				
 				if (this.light) {
 					this.rendedModelFire (x, y, z, rotation);

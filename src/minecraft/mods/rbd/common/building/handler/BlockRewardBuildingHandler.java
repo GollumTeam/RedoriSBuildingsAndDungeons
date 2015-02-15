@@ -24,9 +24,9 @@ public class BlockRewardBuildingHandler extends BuildingBlockHandler {
 			
 			TileEntityReward ter = (TileEntityReward)te;
 			
-			if (orientation == Unity.ORIENTATION_NONE)  { ter.orientation = 0; } else 
-			if (orientation == Unity.ORIENTATION_UP)    { ter.orientation = 0; } else 
-			if (orientation == Unity.ORIENTATION_DOWN)  { ter.orientation = 2; } else 
+			if (orientation == Unity.ORIENTATION_NONE)  { ter.orientation = 2; } else 
+			if (orientation == Unity.ORIENTATION_UP)    { ter.orientation = 2; } else 
+			if (orientation == Unity.ORIENTATION_DOWN)  { ter.orientation = 0; } else 
 			if (orientation == Unity.ORIENTATION_LEFT)  { ter.orientation = 3; } else 
 			if (orientation == Unity.ORIENTATION_RIGTH) { ter.orientation = 1; } else 
 			{

@@ -22,8 +22,13 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 			default:
 			case 0:
 				this.scale = 0.5;
-				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, (rotation+90)%360);
-				this.rendedModelBoard (x, y, z, (rotation+90)%360);
+				this.scaleInventory = 1.5F;
+				if (!this.isInventory) {
+					rotation = (rotation+90)%360;
+				}
+				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, rotation);
+				this.rendedModelBoard (x, y, z, rotation);
+				this.scaleInventory = 1.0F;
 				this.scale = 1.0;
 				
 				break;

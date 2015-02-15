@@ -5,6 +5,19 @@
 	],
 	
 	"sets": {
-		"1x1x3":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"down" }
+		"1x1x2":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"down" },
+		"1x1x0":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"up" },
+		"0x1x1":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"left" },
+		"2x1x1":  { "block": "RBD:lightRewardOn", "metadata":0, "orientation":"right" },
+		
+		"4x1x2":  { "block": "RBD:lightRewardOff", "metadata":0, "orientation":"down" },
+		"4x1x0":  { "block": "RBD:lightRewardOff", "metadata":0, "orientation":"up" },
+		"3x1x1":  { "block": "RBD:lightRewardOff", "metadata":0, "orientation":"left" },
+		"5x1x1":  { "block": "RBD:lightRewardOff", "metadata":0, "orientation":"right" },
+		
+		"7x1x2":  { "block": "RBD:commonReward", "metadata":0, "orientation":"down" },
+		"7x1x0":  { "block": "RBD:commonReward", "metadata":0, "orientation":"up" },
+		"6x1x1":  { "block": "RBD:commonReward", "metadata":0, "orientation":"left" },
+		"8x1x1":  { "block": "RBD:commonReward", "metadata":0, "orientation":"right" }
 	}
 }

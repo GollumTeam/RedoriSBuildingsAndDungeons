@@ -11,7 +11,12 @@
 						"blocksSpawn":["minecraft:grass"]
 					}
 				}
-			},
+			}
+		}
+	},
+	"village": {
+		"globalSpawnRate":5,
+		"buildings": {
 			"village1": {
 				"disabled": false,
 				"dimentions": {
@@ -21,15 +26,15 @@
 						"blocksSpawn":["minecraft:grass"]
 					}
 				}
-			},
+			}
+		}
+	},
+	"test": {
+		"globalSpawnRate":0,
+		"buildings": {
 			"test": {
 				"disabled": true,
 				"dimentions": {
-					"0": {
-						"spawnRate":0,
-						"spawnHeight":3,
-						"blocksSpawn":[]
-					}
 				}
 			}
 		}
