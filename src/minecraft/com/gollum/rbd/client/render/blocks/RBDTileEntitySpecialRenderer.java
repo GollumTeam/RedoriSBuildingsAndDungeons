@@ -91,6 +91,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	}
 	
 	protected void endRender() {
+		RenderHelper.enableGUIStandardItemLighting();
 		GL11.glPopMatrix();
 		if (this.alpha != 1.0F && !this.isInventory) {
 			GL11.glDisable(GL11.GL_BLEND);

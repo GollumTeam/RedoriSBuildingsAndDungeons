@@ -154,7 +154,7 @@ public class ModelGoldenButterfly extends ModelBase implements IRBDModel {
 		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 		this.renderModel(f5);
 	}
-
+	
 	@Override
 	public void renderModel(float f5) {
 		base1.render(f5);

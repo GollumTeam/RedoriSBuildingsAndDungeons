@@ -22,14 +22,17 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 		int subBlock = ((IBlockMetadataHelper)ModBlocks.blockLightRewardOn).getEnabledMetadata(metadata);
 		
 		
+		this.light = true;
 		
 		switch (metadata) {
 			default:
 			case 0:
 				this.scale = 0.5;
-				this.scaleInventory = 1.5F;
-				if (!this.isInventory) {
-					rotation = (rotation+90)%360;
+				this.scaleInventory = 1.6F;
+				rotation = (rotation+90)%360;
+				if (this.isInventory) {
+					this.light = false;
+					rotation = (rotation+310)%360;
 				}
 				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, rotation);
 				this.rendedModelBoard (x, y, z, rotation);
@@ -39,12 +42,25 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				break;
 			case 1:
 				this.scale = 0.5;
+				this.scaleInventory = 1.6F;
+				rotation = (rotation+90)%360;
+				if (this.isInventory) {
+					rotation = (rotation+270)%360;
+					y += 0.1;
+				}
 				this.renderModel(this.modelGoldenButterfly, "goldenbutterfly"  , x, y, z, rotation);
+				this.scaleInventory = 1.0F;
 				this.scale = 1.0;
 				
 				break;
 			case 2:
 				this.scale = 0.5;
+				this.scaleInventory = 1.5F;
+				if (this.isInventory) {
+					rotation = (rotation+225)%360;
+					y -= 0.3;
+					x -= 0.07;
+				}
 				this.renderModel(this.modelGrannysCanvas, "grannyscanvas"  , x, y, z, rotation);
 				this.scale = 1.0;
 				

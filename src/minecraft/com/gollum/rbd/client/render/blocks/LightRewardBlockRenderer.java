@@ -20,15 +20,16 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 		TileEntityLightReward tileEntityLightReward = (TileEntityLightReward)tileEntity;
 		int subBlock = ((IBlockMetadataHelper)ModBlocks.blockLightRewardOn).getEnabledMetadata(metadata);
 		
-		this.light = false;
 		switch (subBlock) {
 			default:
 			case 0:
+				this.scaleInventory = 1.65F;
+				this.light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
 				if (this.isInventory) {
 					rotation = (rotation+270)%360;
+					this.light = true;
+					y += 0.2;
 				}
-				this.scaleInventory = 1.5F;
-				this.light = tileEntityLightReward.blockType == ModBlocks.blockLightRewardOn;
 				this.rendedModelBase (x, y, z, rotation);
 				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation);
 				this.scaleInventory = 1.0F;
@@ -36,6 +37,7 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				if (this.light) {
 					this.rendedModelFire (x, y, z, rotation);
 				}
+				this.light = false;
 				
 				break;
 		}
