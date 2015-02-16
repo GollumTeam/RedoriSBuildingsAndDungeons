@@ -56,12 +56,15 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 			case 2:
 				this.scale = 0.5;
 				this.scaleInventory = 1.5F;
+				this.lightInventory = false;
 				if (this.isInventory) {
 					rotation = (rotation+225)%360;
 					y -= 0.3;
 					x -= 0.07;
 				}
 				this.renderModel(this.modelGrannysCanvas, "grannyscanvas"  , x, y, z, rotation);
+				this.lightInventory = true;
+				this.scaleInventory = 1.0F;
 				this.scale = 1.0;
 				
 				break;

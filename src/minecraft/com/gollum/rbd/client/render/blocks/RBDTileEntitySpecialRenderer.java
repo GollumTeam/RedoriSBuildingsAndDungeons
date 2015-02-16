@@ -19,6 +19,7 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 	private HashMap<String, ResourceLocation> textures = new HashMap<String, ResourceLocation>();
 	protected boolean isInventory;
 	protected boolean light;
+	protected boolean lightInventory = true;
 	protected double scale = 1.0;
 	protected double scaleInventory = 1.0;
 	protected float alpha = 1.0F;
@@ -83,10 +84,14 @@ public abstract class RBDTileEntitySpecialRenderer extends TileEntitySpecialRend
 		
 		this.bindTexture(this.getTexture(textureName));
 		GL11.glPushMatrix();
-		if (this.light) {
-			RenderHelper.disableStandardItemLighting();
+		if (this.isInventory && this.lightInventory) {
+			RenderHelper.enableGUIStandardItemLighting();
 		} else {
-			RenderHelper.enableStandardItemLighting();
+			if (this.light) {
+				RenderHelper.disableStandardItemLighting();
+			} else {
+				RenderHelper.enableStandardItemLighting();
+			}
 		}
 	}
 	

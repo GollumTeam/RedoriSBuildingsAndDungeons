@@ -31,6 +31,7 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 					y += 0.2;
 				}
 				this.rendedModelBase (x, y, z, rotation);
+				this.lightInventory = false;
 				this.renderModel(this.modelChandelier, "chandelier"  , x, y, z, rotation);
 				this.scaleInventory = 1.0F;
 				
@@ -38,12 +39,14 @@ public class LightRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 					this.rendedModelFire (x, y, z, rotation);
 				}
 				this.light = false;
+				this.lightInventory = true;
 				
 				break;
 		}
 	}
 	
 	protected void rendedModelBase (double x, double y, double z, float rotation) {
+		this.lightInventory = true;
 		this.alpha = 0.50F;
 		this.beforeRender("chandelier", x, y, z, rotation);
 		this.modelChandelier.renderModelBase(0.0625F);
