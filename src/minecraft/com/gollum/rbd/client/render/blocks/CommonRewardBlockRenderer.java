@@ -1,6 +1,8 @@
 package com.gollum.rbd.client.render.blocks;
 
 import com.gollum.core.tools.helper.IBlockMetadataHelper;
+import com.gollum.rbd.client.model.blocks.ModelGoldenButterfly;
+import com.gollum.rbd.client.model.blocks.ModelGrannysCanvas;
 import com.gollum.rbd.client.model.blocks.ModelStrangeGame;
 import com.gollum.rbd.common.tileentities.TileEntityCommonReward;
 import com.gollum.rbd.inits.ModBlocks;
@@ -8,8 +10,10 @@ import com.gollum.rbd.inits.ModBlocks;
 import net.minecraft.tileentity.TileEntity;
 
 public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
-	
-	private ModelStrangeGame modelStrangeGame = new ModelStrangeGame();
+
+	private ModelStrangeGame     modelStrangeGame     = new ModelStrangeGame();
+	private ModelGoldenButterfly modelGoldenButterfly = new ModelGoldenButterfly();
+	private ModelGrannysCanvas   modelGrannysCanvas   = new ModelGrannysCanvas();
 	
 	@Override
 	protected void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, float rotation) {
@@ -19,7 +23,7 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 		
 		
 		
-		switch (subBlock) {
+		switch (metadata) {
 			default:
 			case 0:
 				this.scale = 0.5;
@@ -30,6 +34,18 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, rotation);
 				this.rendedModelBoard (x, y, z, rotation);
 				this.scaleInventory = 1.0F;
+				this.scale = 1.0;
+				
+				break;
+			case 1:
+				this.scale = 0.5;
+				this.renderModel(this.modelGoldenButterfly, "goldenbutterfly"  , x, y, z, rotation);
+				this.scale = 1.0;
+				
+				break;
+			case 2:
+				this.scale = 0.5;
+				this.renderModel(this.modelGrannysCanvas, "grannyscanvas"  , x, y, z, rotation);
 				this.scale = 1.0;
 				
 				break;
