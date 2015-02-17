@@ -1,19 +1,21 @@
 package com.gollum.rbd.client.render.blocks;
 
+import net.minecraft.tileentity.TileEntity;
+
 import com.gollum.core.tools.helper.IBlockMetadataHelper;
+import com.gollum.rbd.client.model.blocks.ModelCoatOfArms;
 import com.gollum.rbd.client.model.blocks.ModelGoldenButterfly;
 import com.gollum.rbd.client.model.blocks.ModelGrannysCanvas;
 import com.gollum.rbd.client.model.blocks.ModelStrangeGame;
 import com.gollum.rbd.common.tileentities.TileEntityCommonReward;
 import com.gollum.rbd.inits.ModBlocks;
 
-import net.minecraft.tileentity.TileEntity;
-
 public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 
 	private ModelStrangeGame     modelStrangeGame     = new ModelStrangeGame();
 	private ModelGoldenButterfly modelGoldenButterfly = new ModelGoldenButterfly();
 	private ModelGrannysCanvas   modelGrannysCanvas   = new ModelGrannysCanvas();
+	private ModelCoatOfArms      modelCoatOfArms      = new ModelCoatOfArms();
 	
 	@Override
 	protected void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, float rotation) {
@@ -64,6 +66,20 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				}
 				this.renderModel(this.modelGrannysCanvas, "grannyscanvas"  , x, y, z, rotation);
 				this.lightInventory = true;
+				this.scaleInventory = 1.0F;
+				this.scale = 1.0;
+				
+				break;
+			case 3:
+				this.scale = 0.5;
+				this.scaleInventory = 1.5F;
+//				this.light = false;
+				if (this.isInventory) {
+					rotation = (rotation+225)%360;
+					y -= 0.3;
+					x -= 0.07;
+				}
+				this.renderModel(this.modelCoatOfArms, "coatofarms"  , x, y, z, rotation);
 				this.scaleInventory = 1.0F;
 				this.scale = 1.0;
 				
