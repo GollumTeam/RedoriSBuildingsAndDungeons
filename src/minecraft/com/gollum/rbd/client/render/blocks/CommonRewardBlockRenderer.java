@@ -33,7 +33,6 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				this.scaleInventory = 1.6F;
 				rotation = (rotation+90)%360;
 				if (this.isInventory) {
-					this.light = false;
 					rotation = (rotation+310)%360;
 				}
 				this.renderModel(this.modelStrangeGame, "strangegame"  , x, y, z, rotation);
@@ -62,7 +61,6 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 				if (this.isInventory) {
 					rotation = (rotation+225)%360;
 					y -= 0.3;
-					x -= 0.07;
 				}
 				this.renderModel(this.modelGrannysCanvas, "grannyscanvas"  , x, y, z, rotation);
 				this.lightInventory = true;
@@ -73,11 +71,10 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 			case 3:
 				this.scale = 0.5;
 				this.scaleInventory = 1.5F;
-//				this.light = false;
+				this.light = false;
 				if (this.isInventory) {
 					rotation = (rotation+225)%360;
 					y -= 0.3;
-					x -= 0.07;
 				}
 				this.renderModel(this.modelCoatOfArms, "coatofarms"  , x, y, z, rotation);
 				this.scaleInventory = 1.0F;
