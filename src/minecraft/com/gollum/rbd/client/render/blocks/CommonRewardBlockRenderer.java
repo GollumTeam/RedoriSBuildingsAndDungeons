@@ -6,6 +6,7 @@ import com.gollum.core.tools.helper.IBlockMetadataHelper;
 import com.gollum.rbd.client.model.blocks.ModelCoatOfArms;
 import com.gollum.rbd.client.model.blocks.ModelGoldenButterfly;
 import com.gollum.rbd.client.model.blocks.ModelGrannysCanvas;
+import com.gollum.rbd.client.model.blocks.ModelSilkFan;
 import com.gollum.rbd.client.model.blocks.ModelStrangeGame;
 import com.gollum.rbd.common.tileentities.TileEntityCommonReward;
 import com.gollum.rbd.inits.ModBlocks;
@@ -16,6 +17,7 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 	private ModelGoldenButterfly modelGoldenButterfly = new ModelGoldenButterfly();
 	private ModelGrannysCanvas   modelGrannysCanvas   = new ModelGrannysCanvas();
 	private ModelCoatOfArms      modelCoatOfArms      = new ModelCoatOfArms();
+	private ModelSilkFan         modelSilkFan         = new ModelSilkFan();
 	
 	@Override
 	protected void renderTileEntityAt(TileEntity tileEntity, double x, double y, double z, float f, int metadata, float rotation) {
@@ -77,6 +79,20 @@ public class CommonRewardBlockRenderer extends RBDTileEntitySpecialRenderer {
 					y -= 0.3;
 				}
 				this.renderModel(this.modelCoatOfArms, "coatofarms"  , x, y, z, rotation);
+				this.scaleInventory = 1.0F;
+				this.scale = 1.0;
+				
+				break;
+			case 4:
+				this.scale = 0.5;
+				this.scaleInventory = 1.5F;
+				this.lightInventory = false;
+				if (this.isInventory) {
+					rotation = (rotation+225)%360;
+					y -= 0.3;
+					x -= 0.07;
+				}
+				this.renderModel(this.modelSilkFan, "silkfan"  , x, y, z, rotation);
 				this.scaleInventory = 1.0F;
 				this.scale = 1.0;
 				
