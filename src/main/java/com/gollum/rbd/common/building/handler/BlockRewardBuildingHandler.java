@@ -13,30 +13,30 @@ import net.minecraft.world.World;
 
 public class BlockRewardBuildingHandler extends BuildingBlockHandler {
 	
-	/**
-	 * Affecte l'orientation
-	 */
-	@Override
-	public void setOrientation(World world, int x, int y, int z, Block block, int metadata, int orientation, int rotate) {
-		
-		TileEntity te = world.getTileEntity(x, y, z);
-		
-		if (te instanceof TileEntityReward) {
-			
-			TileEntityReward ter = (TileEntityReward)te;
-			
-			if (orientation == Unity.ORIENTATION_NONE)  { ter.orientation = 2; } else 
-			if (orientation == Unity.ORIENTATION_UP)    { ter.orientation = 2; } else 
-			if (orientation == Unity.ORIENTATION_DOWN)  { ter.orientation = 0; } else 
-			if (orientation == Unity.ORIENTATION_LEFT)  { ter.orientation = 3; } else 
-			if (orientation == Unity.ORIENTATION_RIGTH) { ter.orientation = 1; } else 
-			{
-				ModGollumCoreLib.log.severe("Bad orientation : "+orientation+" name:"+block.getUnlocalizedName()+" pos:"+x+","+y+","+z);
-			}
-			world.notifyBlockChange(x, y, z, block);
-			return;
-		}
-		
-	}
+//	/**
+//	 * Affecte l'orientation
+//	 */
+//	@Override
+//	public void setOrientation(World world, int x, int y, int z, Block block, int metadata, int orientation, int rotate) {
+//		
+//		TileEntity te = world.getTileEntity(x, y, z);
+//		
+//		if (te instanceof TileEntityReward) {
+//			
+//			TileEntityReward ter = (TileEntityReward)te;
+//			
+//			if (orientation == Unity.ORIENTATION_NONE)  { ter.orientation = 2; } else 
+//			if (orientation == Unity.ORIENTATION_UP)    { ter.orientation = 2; } else 
+//			if (orientation == Unity.ORIENTATION_DOWN)  { ter.orientation = 0; } else 
+//			if (orientation == Unity.ORIENTATION_LEFT)  { ter.orientation = 3; } else 
+//			if (orientation == Unity.ORIENTATION_RIGTH) { ter.orientation = 1; } else 
+//			{
+//				ModGollumCoreLib.log.severe("Bad orientation : "+orientation+" name:"+block.getUnlocalizedName()+" pos:"+x+","+y+","+z);
+//			}
+//			world.notifyBlockChange(x, y, z, block);
+//			return;
+//		}
+//		
+//	}
 	
 }
