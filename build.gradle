@@ -23,8 +23,8 @@ minecraft {
 }
 
 version = "3.0.0-"+minecraft.version
-group= "com.gollum.morepistons" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "MorePistons"
+group= "com.gollum.rbd" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "RedoriSBuildingsAndDungeons"
 
 dependencies {
     // you may put jars on which you depend on in ./libs

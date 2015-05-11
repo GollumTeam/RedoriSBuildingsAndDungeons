@@ -1,7 +1,7 @@
-MorePistons
+Redori's Buildings and Donjons
 ============
 
-More Pistons Mod for Minecraft
+Add buildings and donjons for Minecraft
 
 Install forge for compile source
 
