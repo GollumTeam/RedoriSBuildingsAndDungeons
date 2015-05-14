@@ -22,7 +22,7 @@ minecraft {
     runDir = "eclipse"
 }
 
-version = "3.0.0-"+minecraft.version
+version = "1.0.0-"+minecraft.version
 group= "com.gollum.rbd" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "RedoriSBuildingsAndDungeons"
 
