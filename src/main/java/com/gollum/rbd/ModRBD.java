@@ -28,7 +28,7 @@ public class ModRBD extends GollumMod {
 
 	public final static String MODID = "RBD";
 	public final static String MODNAME = "Redori's Buildings and Dungeons";
-	public final static String VERSION = "1.0.0";
+	public final static String VERSION = "1.0.0DEV";
 	public final static String MINECRAFT_VERSION = "1.6.4";
 	public final static String DEPENDENCIES = "required-after:GollumCoreLib";
 	
